@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="技术文章与学习随笔分享">
+    <title>文章随笔 | 技术博客</title>
+    
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="主要导航">
+            <div class="navbar-container">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../img/aaa.jpg" alt="AA技术博客" width="120" height="40">
+                </a>
+
+                <button class="hamburger" 
+                        aria-label="切换导航菜单"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        onclick="toggleMenu()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+                <div class="navbar-collapse" id="primary-navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html">首页</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a href="javascript:void(0)" 
+                               class="dropdown-toggle"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">技术分享</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="articles.html" class="dropdown-item">文章随笔</a></li>
+                                <li><a href="resources.html" class="dropdown-item">资源链接</a></li>
+                                <li><a href="logs.html" class="dropdown-item">日志分享</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="life.html">生活随笔</a></li>
+                        <li class="nav-item"><a href="projects.html">项目展示</a></li>
+                        <li class="nav-item"><a href="about.html">关于我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <article class="article-content">
+            <h1 class="page-title">技术文章</h1>
+            <div class="articles-container">
+                <!-- 文章卡片示例 -->
+                <article class="article-card">
+                    <h2 class="article-card__title">HTML5 语义化标签的正确使用</h2>
+                    <p class="article-card__excerpt">
+                        探讨HTML5中各种语义化标签的使用场景和最佳实践，帮助开发者编写更有意义的HTML结构...
+                    </p>
+                    <div class="article-card__meta">
+                        <time datetime="2024-01-15">2024-01-15</time>
+                        <span class="article-card__category">HTML</span>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <h2 class="article-card__title">CSS Grid 布局完全指南</h2>
+                    <p class="article-card__excerpt">
+                        详细介绍CSS Grid布局的核心概念、常用属性和实际应用案例，掌握现代化的页面布局技术...
+                    </p>
+                    <div class="article-card__meta">
+                        <time datetime="2024-01-10">2024-01-10</time>
+                        <span class="article-card__category">CSS</span>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <h2 class="article-card__title">JavaScript异步编程实践</h2>
+                    <p class="article-card__excerpt">
+                        深入理解Promise、async/await的工作原理，以及在实际项目中的最佳实践方案...
+                    </p>
+                    <div class="article-card__meta">
+                        <time datetime="2024-01-05">2024-01-05</time>
+                        <span class="article-card__category">JavaScript</span>
+                    </div>
+                </article>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 class="footer-heading">快速导航</h4>
+                <nav aria-label="页脚导航">
+                    <ul class="footer-links">
+                        <!-- 移除不存在的privacy和terms链接 -->
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">联系方式</h4>
+                <address class="contact-info">
+                    <p><a href="tel:19148323460" class="contact-link">19148323460</a></p>
+                    <p><a href="mailto:938566908@qq.com" class="contact-link">938566908@qq.com</a></p>
+                    <p>中国广西省</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">友情链接</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://juejin.cn" class="footer-link" target="_blank" rel="noopener">掘金</a></li>
+                    <li><a href="https://www.zhihu.com" class="footer-link" target="_blank" rel="noopener">知乎</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright-notice">
+            <p>© 2025 技术博客 | 桂ICP备2025000000号</p>
+        </div>
+    </footer>
+</body>
+</html>

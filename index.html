@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- 
+/**
+ * 首页
+ * 展示个人技能和项目概览
+ * 作者：景夜不熬夜
+ *
+ * 页面结构：
+ * 1. 头部导航
+ * 2. 主要内容区
+ * 3. 页脚信息
+ */
+-->
+<html lang="zh-CN">
+<head>
+    <!-- 基本元信息 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="前端开发与全栈实践的技术博客">
+    
+    <!-- 资源预加载，提升性能 -->
+    <link rel="preload" href="css/common.css" as="style">
+    <link rel="preload" href="css/main.css" as="style">
+    
+    <!-- CSS 文件加载 -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- JavaScript 文件加载，使用 defer 避免阻塞渲染 -->
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <!-- 响应式导航栏 -->
+    <header class="main-header">
+        <nav class="navbar" aria-label="主要导航">
+            <div class="navbar-container">
+                <!-- Logo -->
+                <a href="./index.html" class="brand-logo">
+                    <img src="./img/aaa.jpg" alt="AA技术博客" width="120" height="40">
+                </a>
+
+                <!-- 移动端菜单切换 -->
+                <button class="hamburger" 
+                        aria-label="切换导航菜单"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        onclick="toggleMenu()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+                <!-- 导航菜单 -->
+                <div class="navbar-collapse" id="primary-navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <a href="index.html" aria-current="page">首页</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" 
+                               class="dropdown-toggle"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">技术分享</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./html/articles.html" class="dropdown-item">文章随笔</a></li>
+                                <li><a href="./html/resources.html" class="dropdown-item">资源链接</a></li>
+                                <li><a href="./html/logs.html" class="dropdown-item">日志分享</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="./html/life.html">生活随笔</a></li>
+                        <li class="nav-item"><a href="./html/projects.html">项目展示</a></li>
+                        <li class="nav-item"><a href="./html/about.html">关于我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <section class="feature-section" aria-labelledby="feature-heading">
+            <h2 id="feature-heading" class="section-title">核心能力展示</h2>
+            <div class="card-grid">
+                <!-- 技术专长 -->
+                <article class="skill-card">
+                    <h3 class="card-title">技术专长</h3>
+                    <ul class="skill-list">
+                        <li>前端开发（HTML5/CSS3/JavaScript）</li>
+                        <li>Vue.js/React框架开发</li>
+                        <li>Node.js后端开发</li>
+                        <li>Webpack/Vite构建工具</li>
+                        <li>数据库设计与管理</li>
+                    </ul>
+                </article>
+
+                <!-- 项目经验 -->
+                <article class="project-card">
+                    <h3 class="card-title">项目经验</h3>
+                    <ul class="project-list">
+                        <li>UI/UX设计原则</li>
+                        <li>响应式布局开发</li>
+                        <li>RESTful API设计</li>
+                        <li>Git版本控制</li>
+                        <li>Vue3组合式API开发</li>
+                        <li>React Hooks状态管理</li>
+                        <li>Node.js API开发</li>
+                        <li>个人博客系统开发</li>
+                    </ul>
+                </article>
+
+                <!-- 博客特色 -->
+                <article class="feature-card">
+                    <h3 class="card-title">博客特色</h3>
+                    <ul class="feature-list">
+                        <li>单元测试（Jest/Mocha）</li>
+                        <li>性能优化技巧</li>
+                        <li>TypeScript开发</li>
+                        <li>跨平台开发经验</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- 删除不存在的隐私政策和服务条款链接 -->
+            <div class="footer-section">
+                <h4 class="footer-heading">快速导航</h4>
+                <nav aria-label="页脚导航">
+                    <ul class="footer-links">
+                        <!-- 只保留实际存在的链接 -->
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">联系方式</h4>
+                <address class="contact-info">
+                    <p><a href="tel:19148323460" class="contact-link">19148323460</a></p>
+                    <p><a href="mailto:938566908@qq.com" class="contact-link">938566908@qq.com</a></p>
+                    <p>中国广西省</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">友情链接</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://juejin.cn" class="footer-link" target="_blank" rel="noopener">掘金</a></li>
+                    <li><a href="https://www.zhihu.com" class="footer-link" target="_blank" rel="noopener">知乎</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright-notice">
+            <p>© 2025 技术博客 | 桂ICP备2025000000号（这里是备案）</p>
+        </div>
+    </footer>
+</body>
+</html>

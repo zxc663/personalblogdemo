@@ -1,0 +1,663 @@
+/**
+ * 主要样式文件 (main.css)
+ * 包含页面特定的样式规则
+ * 作者：景夜不熬夜
+ * 更新日期：2024-01
+ * 
+ * 页面组件：
+ * 1. 主页面布局
+ * 2. 文章卡片
+ * 3. 项目展示
+ * 4. 个人简介
+ * 5. 技能进度条
+ * 6. 资源列表
+ * 7. 博客卡片
+ * 8. 时间轴
+ * 9. 404页面
+ */
+
+/**
+ * 主样式表
+ * 包含页面特定的样式和组件
+ * 作者：景夜不熬夜
+ */
+
+/**
+ * 1. 主内容区域布局
+ * - 设置最大宽度以确保在大屏上的阅读体验
+ * - 添加适当的内边距提供呼吸空间
+ */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ==========================================================================
+   1. 主内容区域布局
+   ========================================================================== */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ==========================================================================
+   2. 特色部分样式
+   ========================================================================== */
+.feature-section {
+    margin-top: 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* ==========================================================================
+   3. 卡片组件样式
+   ========================================================================== */
+.skill-card,
+.project-card,
+.feature-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   4. 列表样式
+   ========================================================================== */
+.skill-list,
+.project-list,
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li,
+.project-list li,
+.feature-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.skill-list li::before,
+.project-list li::before,
+.feature-list li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ==========================================================================
+   5. 响应式适配
+   ========================================================================== */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   6. 文章页面样式
+   ========================================================================== */
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* 文章卡片样式 */
+.article-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.article-card__excerpt {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.article-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+    font-size: 0.875rem;
+}
+
+.article-card__category {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+}
+
+/* ==========================================================================
+   7. 资源页面样式
+   ========================================================================== */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+/* 资源卡片样式 */
+.resource-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.resource-card__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.resource-card__description {
+    color: #666;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.resource-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-card__link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   8. 日志页面样式
+   ========================================================================== */
+.timeline-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* 时间轴样式优化 */
+.timeline-item {
+    position: relative;
+    padding: 2rem 0;
+    border-left: 2px solid #e0e0e0;
+    margin-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 2rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #007bff;
+}
+
+.timeline-item__date {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem; /* 增加日期左边距 */
+}
+
+.timeline-item__content {
+    padding-left: 2rem; /* 增加内容左边距 */
+}
+
+.timeline-item__content h3 {
+    margin-bottom: 1rem; /* 添加标题底部间距 */
+    color: #2c3e50;
+}
+
+.timeline-item__content ul {
+    margin-left: 1rem; /* 为列表添加左边距 */
+}
+
+.timeline-item__content li {
+    margin-bottom: 0.5rem; /* 列表项之间的间距 */
+    color: #666;
+}
+
+/* ==========================================================================
+   9. 生活随笔页面样式
+   ========================================================================== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* 博客文章卡片样式 */
+.blog-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card__content {
+    padding: 1.5rem;
+}
+
+.blog-card__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.blog-card__excerpt {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.blog-card__meta {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   10. 项目展示页面样式
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* 项目卡片样式 */
+.project-showcase {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-showcase:hover {
+    transform: translateY(-5px);
+}
+
+.project-showcase__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-showcase__content {
+    padding: 1.5rem;
+}
+
+.project-showcase__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.project-showcase__description {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-showcase__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-showcase__tag {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+}
+
+.project-showcase__links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-showcase__link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.project-showcase__link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   11. 关于我页面样式
+   ========================================================================== */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.profile-section,
+.skills-section {
+    margin-bottom: 3rem;
+}
+
+/* 页面通用标题样式 */
+.page-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    font-weight: 600;
+}
+
+/* 个人资料卡片样式 */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.profile-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #666;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #007bff;
+}
+
+/* 技能展示样式 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skill-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skill-name {
+    min-width: 100px;
+}
+
+/* 技能进度条组件
+ * @使用方法:
+ * 1. 复制HTML结构
+ * 2. 设置width百分比
+ * 3. 更新skill-text文本
+ */
+.skill-bar {
+    flex: 1;
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    overflow: visible; /* 改为visible以显示溢出的文字 */
+    position: relative;
+    margin-right: 30px; /* 为百分比文字预留空间 */
+}
+
+/* 进度条填充部分
+ * @注意事项:
+ * - width控制进度
+ * - 支持0-100的百分比值
+ */
+.skill-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #007bff;
+    border-radius: 4px;
+}
+
+.skill-text {
+    position: absolute;
+    right: -30px; /* 调整位置，确保不会与进度条重叠 */
+    top: -6px; /* 微调垂直位置 */
+    font-size: 0.875rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+/* 使用说明:
+ * <div class="skill-bar" style="--percent: 90%">
+ *     <span class="skill-text">90%</span>
+ * </div>
+ */
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #007bff;
+    border-radius: 4px;
+    width: attr(data-percent %);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .articles-container,
+    .resources-grid,
+    .blog-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   12. 404错误页面样式
+   ========================================================================== */
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-container {
+    max-width: 600px;
+}
+
+.error-title {
+    font-size: 8rem;
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1;
+}
+
+.error-text {
+    font-size: 2rem;
+    color: #34495e;
+    margin: 1rem 0;
+}
+
+.error-subtext {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #bdc3c7;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学习和开发日志记录">
+    <title>日志分享 | 技术博客</title>
+    
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="主要导航">
+            <div class="navbar-container">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../img/aaa.jpg" alt="AA技术博客" width="120" height="40">
+                </a>
+
+                <button class="hamburger" 
+                        aria-label="切换导航菜单"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        onclick="toggleMenu()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+                <div class="navbar-collapse" id="primary-navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html">首页</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" 
+                               class="dropdown-toggle"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">技术分享</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="articles.html" class="dropdown-item">文章随笔</a></li>
+                                <li><a href="resources.html" class="dropdown-item">资源链接</a></li>
+                                <li><a href="logs.html" class="dropdown-item">日志分享</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="life.html">生活随笔</a></li>
+                        <li class="nav-item"><a href="projects.html">项目展示</a></li>
+                        <li class="nav-item"><a href="about.html">关于我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="logs-section">
+            <h1 class="page-title">开发日志</h1>
+            <div class="timeline-container">
+                <!-- 最新更新 -->
+                <div class="timeline-item">
+                    <div class="timeline-item__date">2025-04-1</div>
+                    <div class="timeline-item__content">
+                        <h3>技能进度条优化</h3>
+                        <ul>
+                            <li>修复了进度条显示问题</li>
+                            <li>优化了百分比文字位置</li>
+                            <li>改进了HTML结构</li>
+                            <li>添加了相关使用说明文档</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item__date">2025-03-31</div>
+                    <div class="timeline-item__content">
+                        <h3>404页面实现</h3>
+                        <ul>
+                            <li>添加了自定义404错误页面</li>
+                            <li>实现了自动跳转功能</li>
+                            <li>添加了GitHub Pages配置</li>
+                            <li>优化了错误页面样式</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item__date">2025-03-30</div>
+                    <div class="timeline-item__content">
+                        <h3>页面结构优化</h3>
+                        <ul>
+                            <li>统一了页面布局结构</li>
+                            <li>优化了导航菜单组件</li>
+                            <li>实现了响应式设计</li>
+                            <li>添加了页面模板</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item__date">2025-03-29</div>
+                    <div class="timeline-item__content">
+                        <h3>项目初始化</h3>
+                        <ul>
+                            <li>创建项目基础结构</li>
+                            <li>设置基础样式文件</li>
+                            <li>添加必要的文档说明</li>
+                            <li>配置开发环境</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 class="footer-heading">快速导航</h4>
+                <nav aria-label="页脚导航">
+                    <ul class="footer-links">
+                        <li><a href="../privacy" class="footer-link">隐私政策</a></li>
+                        <li><a href="../terms" class="footer-link">服务条款</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">联系方式</h4>
+                <address class="contact-info">
+                    <p><a href="tel:19148323460" class="contact-link">19148323460</a></p>
+                    <p><a href="mailto:938566908@qq.com" class="contact-link">938566908@qq.com</a></p>
+                    <p>中国广西省</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">友情链接</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://juejin.cn" class="footer-link" target="_blank" rel="noopener">掘金</a></li>
+                    <li><a href="https://www.zhihu.com" class="footer-link" target="_blank" rel="noopener">知乎</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright-notice">
+            <p>© 2025 技术博客 | 桂ICP备2025000000号</p>
+        </div>
+    </footer>
+</body>
+</html>

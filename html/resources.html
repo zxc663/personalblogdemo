@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="优质技术资源和工具推荐">
+    <title>资源链接 | 技术博客</title>
+    
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="主要导航">
+            <div class="navbar-container">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../img/aaa.jpg" alt="AA技术博客" width="120" height="40">
+                </a>
+
+                <button class="hamburger" 
+                        aria-label="切换导航菜单"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        onclick="toggleMenu()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+                <div class="navbar-collapse" id="primary-navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html">首页</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a href="javascript:void(0)" 
+                               class="dropdown-toggle"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">技术分享</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="articles.html" class="dropdown-item">文章随笔</a></li>
+                                <li><a href="resources.html" class="dropdown-item active">资源链接</a></li>
+                                <li><a href="logs.html" class="dropdown-item">日志分享</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="life.html">生活随笔</a></li>
+                        <li class="nav-item"><a href="projects.html">项目展示</a></li>
+                        <li class="nav-item"><a href="about.html">关于我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="resources-section">
+            <h1 class="page-title">推荐资源</h1>
+            <div class="resources-grid">
+                <!-- 示例资源卡片 -->
+                <article class="resource-card">
+                    <!-- 暂时移除图标，因为资源还不存在 -->
+                    <h2 class="resource-card__title">资源名称</h2>
+                    <p class="resource-card__description">这是一个很棒的开发工具/资源，可以帮助提高开发效率...</p>
+                    <!-- 确保有实际链接时再添加 -->
+                </article>
+                <!-- 更多资源卡片将动态加载 -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 class="footer-heading">快速导航</h4>
+                <nav aria-label="页脚导航">
+                    <ul class="footer-links">
+                        <li><a href="../privacy" class="footer-link">隐私政策</a></li>
+                        <li><a href="../terms" class="footer-link">服务条款</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">联系方式</h4>
+                <address class="contact-info">
+                    <p><a href="tel:19148323460" class="contact-link">19148323460</a></p>
+                    <p><a href="mailto:938566908@qq.com" class="contact-link">938566908@qq.com</a></p>
+                    <p>中国广西省</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">友情链接</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://juejin.cn" class="footer-link" target="_blank" rel="noopener">掘金</a></li>
+                    <li><a href="https://www.zhihu.com" class="footer-link" target="_blank" rel="noopener">知乎</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright-notice">
+            <p>© 2025 技术博客 | 桂ICP备2025000000号</p>
+        </div>
+    </footer>
+</body>
+</html>

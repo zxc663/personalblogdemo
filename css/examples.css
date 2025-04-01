@@ -1,0 +1,31 @@
+/**
+ * CSS学习示例
+ * 展示常用的CSS概念和技巧
+ */
+
+/* 1. Flexbox布局示例 */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 2. Grid布局示例 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* 3. 响应式设计示例 */
+@media (max-width: 768px) {
+    .responsive-element {
+        flex-direction: column;
+    }
+}
+
+/* 4. CSS变量使用示例 */
+:root {
+    --primary-color: #007bff;
+    --spacing-unit: 1rem;
+}

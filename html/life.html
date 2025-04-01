@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="生活感悟和个人随笔">
+    <title>生活随笔 | 技术博客</title>
+    
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="主要导航">
+            <div class="navbar-container">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../img/aaa.jpg" alt="AA技术博客" width="120" height="40">
+                </a>
+
+                <button class="hamburger" 
+                        aria-label="切换导航菜单"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        onclick="toggleMenu()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+                <div class="navbar-collapse" id="primary-navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html">首页</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" 
+                               class="dropdown-toggle"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">技术分享</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="articles.html" class="dropdown-item">文章随笔</a></li>
+                                <li><a href="resources.html" class="dropdown-item">资源链接</a></li>
+                                <li><a href="logs.html" class="dropdown-item">日志分享</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item active"><a href="life.html" aria-current="page">生活随笔</a></li>
+                        <li class="nav-item"><a href="projects.html">项目展示</a></li>
+                        <li class="nav-item"><a href="about.html">关于我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="life-section">
+            <h1 class="page-title">生活随笔</h1>
+            <div class="blog-grid">
+                <!-- 示例博客卡片 -->
+                <article class="blog-card">
+                    <img src="../img/placeholder.jpg" alt="文章封面" class="blog-card__image">
+                    <div class="blog-card__content">
+                        <h2 class="blog-card__title">文章标题</h2>
+                        <p class="blog-card__excerpt">这里是文章摘要，简短介绍文章内容...</p>
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">2025-03-30</span>
+                            <span class="blog-card__category">生活感悟</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- 更多博客卡片将动态加载 -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 class="footer-heading">快速导航</h4>
+                <nav aria-label="页脚导航">
+                    <ul class="footer-links">
+                        <li><a href="../privacy" class="footer-link">隐私政策</a></li>
+                        <li><a href="../terms" class="footer-link">服务条款</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">联系方式</h4>
+                <address class="contact-info">
+                    <p><a href="tel:+1234567890" class="contact-link">联系电话</a></p>
+                    <p><a href="mailto:example@domain.com" class="contact-link">电子邮箱</a></p>
+                    <p>XX省XX市</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">友情链接</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://juejin.cn" class="footer-link" target="_blank" rel="noopener">掘金</a></li>
+                    <li><a href="https://www.zhihu.com" class="footer-link" target="_blank" rel="noopener">知乎</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright-notice">
+            <p>© 2025 技术博客 | 桂ICP备2025000000号</p>
+        </div>
+    </footer>
+</body>
+</html>
